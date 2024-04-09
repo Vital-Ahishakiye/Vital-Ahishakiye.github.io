@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vital Ahishakiye's Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
   body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px; /* Adjust base font size */
+    font-size: 17px;
   }
   .container {
-    display: flex; /* Use flexbox instead of table for layout */
+    display: flex;
     max-width: 80%;
     margin: 0 auto;
   }
@@ -19,8 +19,8 @@
     padding: 10px;
   }
   .fixed-column {
-    width: 30%; /* Fixed width */
-    flex-shrink: 0; /* Prevent column from shrinking */
+    width: 30%;
+    flex-shrink: 0;
   }
   .flexible-column {
     width: 70%;
@@ -30,23 +30,23 @@
     border-radius: 50%;
   }
   ul {
-    list-style: none; /* Remove bullets */
+    list-style: none;
     padding: 0;
   }
   ul li {
-    margin-bottom: 10px; /* Add space between list items */
+    margin-bottom: 10px;
   }
-  ul li i {
-    margin-right: 8px; /* Space between icon and text */
-    color: #007bff; /* Example: blue icons */
-  }
-  a {
+  ul li i.fa-envelope { color: #D44638; } /* Gmail Red */
+  ul li i.fab.fa-linkedin { color: #0A66C2; } /* LinkedIn Blue */
+  ul li i.fab.fa-github { color: #333; } /* GitHub Black */
+  ul li i.fa-phone { color: green; } /* Phone Green */
+  a, a:visited {
     text-decoration: none;
-    color: #007bff; /* Example: blue links */
+    color: #007bff;
   }
   a:hover {
     text-decoration: underline;
-    color: #0056b3; /* Darker blue on hover */
+    color: #0056b3;
   }
 </style>
 </head>
@@ -59,7 +59,7 @@
     <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="View My GitHub Profile" />
     <h4><a href="https://github.com/Vital-Ahishakiye">View my GitHub Profile</a></h4>
     <h4><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vahishak%20Second%20Resume(April%20update).pdf">View my Resume</a></h4>
-    <h3>Graduate Student || CMU-Africa || MsECE)</h3>
+    <h3>Graduate Student || CMU-Africa || MsECE</h3>
     <ul>
       <li><a href="mailto:vahishak@andrew.cmu.edu"><i class="fa fa-envelope"></i>Institutional email</a></li>
       <li><a href="mailto:vitalahishakiye@gmail.com"><i class="fa fa-envelope"></i>Personal email</a></li>
@@ -72,19 +72,20 @@
   <!-- Second Column -->
   <div class="column flexible-column">
     <h2>About</h2>
-       <p>Hello everyone! My name is Vital Ahishakiye, and I am currently pursuing a Master's of Science in Electrical and Computer Engineering with a specialization in Applied Machine Learning at Carnegie Mellon University Africa.</p>
-       <p>Data science has not only shaped my career trajectory but has also empowered me to make informed decisions in both my professional and personal life. One notable example is how I utilized data analysis techniques to successfully overcome a betting habit, an experience I share in detail in  ["My Unforeseen Journey into Data"](https://github.com/Vital-Ahishakiye/My-Unforeseen-Journey-into-Data/blob/main/full-story.md).</p>
-       <p>In addition to my academic pursuits, I am dedicated to continuously enhancing my skills through various avenues. I am presently enrolled in the Google Advanced Data Analytics course, aiming to consolidate and strengthen the diverse skills I have acquired through my coursework. Furthermore, I have actively engaged in practical applications of my knowledge by participating in Kaggle competitions such as the Titanic shipwreck and credit card challenges.</p>
-       <p>I am passionate about leveraging data science to drive positive change and innovation, and I look forward to contributing meaningfully to this dynamic field. </p>  </div>
+    <p>Hello everyone! My name is Vital Ahishakiye, and I am currently pursuing a Master's of Science in Electrical and Computer Engineering with a specialization in Applied Machine Learning at Carnegie Mellon University Africa.</p>
+    <!-- Additional paragraphs -->
+    <p>Data science has not only shaped my career trajectory but has also empowered me to make informed decisions in both my professional and personal life. One notable example is how I utilized data analysis techniques to successfully overcome a betting habit, an experience I share in detail in  ["My Unforeseen Journey into Data"](https://github.com/Vital-Ahishakiye/My-Unforeseen-Journey-into-Data/blob/main/full-story.md).</p>
+    <p>In addition to my academic pursuits, I am dedicated to continuously enhancing my skills through various avenues. I am presently enrolled in the Google Advanced Data Analytics course, aiming to consolidate and strengthen the diverse skills I have acquired through my coursework. Furthermore, I have actively engaged in practical applications of my knowledge by participating in Kaggle competitions such as the Titanic shipwreck and credit card challenges.</p>
+    <p>I am passionate about leveraging data science to drive positive change and innovation, and I look forward to contributing meaningfully to this dynamic field. </p>
 
-        <h3>Some of my work</h3>
-        <p>Wausau, WI precipitation 1943-2023</p>
-        <img src="link-to-precipitation-chart" alt="Wausau, WI precipitation chart">
-        <p>Iowa River discharge 1903-2023</p>
-        <img src="link-to-discharge-chart" alt="Iowa River discharge chart">
-        <p>Hosted on GitHub Pages</p>
+    <h3>Some of my work</h3>
+    <p>Wausau, WI precipitation 1943-2023</p>
+    <img src="link-to-precipitation-chart" alt="Wausau, WI precipitation chart">
+    <p>Iowa River discharge 1903-2023</p>
+    <img src="link-to-discharge-chart" alt="Iowa River discharge chart">
+    <p>Hosted on GitHub Pages</p>
+  </div>
 </div>
 
 </body>
 </html>
-
