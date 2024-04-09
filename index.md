@@ -5,21 +5,22 @@
 
 # Vital Ahishakiye
 
-![View My GitHub Profile](https://avatars.githubusercontent.com/u/141754322?v=4)
+<img src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="View My GitHub Profile" />
 
-[View My GitHub Profile](https://github.com/Vital-Ahishakiye)
+<a href="https://github.com/Vital-Ahishakiye" style="text-decoration: none;">View My GitHub Profile</a>
 
 </td>
 <!-- Second Column -->
-<td valign="top" width="30%">
+<td valign="top" width="70%">
 
 ## Graduate Student (CMU-Africa/ Electrical and Computer Engineering)
 
-- Email 1: [Vital's Institutional email](mailto:vahishak@andrew.cmu.edu)
-- Email 2: [Vital's Personal email](mailto:vitalahishakiye@gmail.com)
-- LinkedIn: [AHISHAKIYE Vital](https://www.linkedin.com/in/ahishakiye-vital)
-- GitHub: [Vital-Ahishakiye](https://github.com/Vital-Ahishakiye)
-- Contact Number: +250788519271
+- **Email 1**: <a href="mailto:vahishak@andrew.cmu.edu" style="text-decoration: none;">*Vital's Institutional email*</a>
+- **Email 2**: <a href="mailto:vitalahishakiye@gmail.com" style="text-decoration: none;">*Vital's Personal email*</a>
+- **LinkedIn**: <a href="https://www.linkedin.com/in/ahishakiye-vital" style="text-decoration: none;">*AHISHAKIYE Vital*</a>
+- **GitHub**: <a href="https://github.com/Vital-Ahishakiye" style="text-decoration: none;">*Vital-Ahishakiye*</a>
+- **Contact Number**: *+250788519271*
+
 
 Hello everyone! My name is Vital Ahishakiye, and I am currently pursuing a Master's of Science in Electrical and Computer Engineering with a specialization in Applied Machine Learning at Carnegie Mellon University Africa.
 
