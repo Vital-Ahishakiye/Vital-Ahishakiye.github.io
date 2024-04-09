@@ -1,5 +1,8 @@
 # Vital Ahishakiye
 
+![View My GitHub Profile](https://avatars.githubusercontent.com/u/141754322?v=4)
+[View My GitHub Profile](https://github.com/Vital-Ahishakiye)
+
 ## Graduate Student (CMU-Africa/ Electrical and Computer Engineering)
 
 - Email 1: [Vital's Institutional email](mailto:vahishak@andrew.cmu.edu)
@@ -14,9 +17,9 @@ Prior to my roles here at Earth Lab and ESITL, I spent 10 years teaching physics
 
 Since coming to CU as a postdoc in 2020, I was involved with the Earth Data Science Corps (EDSC) program where I served as lead instructor. I'm now overseeing the ESITL Stars internship, modeled after the ESDC, and the ESITL Data Short Course.
 
-![View My GitHub Profile](link-to-github-profile-picture)
 
-### Check out some of my work:
+
+### Works I have done:
 
 - Wausau, WI precipitation 1943-2023
   ![Wausau, WI precipitation chart](link-to-precipitation-chart)
