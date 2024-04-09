@@ -10,28 +10,30 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     margin: 0; /* Added to remove default margin */
+    background-image: url('https://raw.githubusercontent.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/main/im.avif'); /* Set background image for the whole page */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make background fixed during scroll */
   }
   .container {
     display: flex;
-    flex-wrap: nowrap; /* Ensure flex items are on the same line */
+    flex-wrap: nowrap;
     width: 100%;
   }
   .column {
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
   }
   .fixed-column {
-    position: fixed; /* Make the column fixed */
+    position: fixed;
     width: 30%;
-    height: 100vh; /* Full height */
-    background-image: url('https://raw.githubusercontent.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/main/im.avif'); /* Add your background image */
-    background-size: cover;
-    background-position: center;
-    overflow-y: auto; /* Enables scrolling within the fixed column if content overflows */
+    height: 100vh;
+    overflow-y: auto;
   }
   .flexible-column {
     margin-left: 30%; /* Offset by the width of the fixed column */
-    width: 70%; /* Remaining width */
-    min-height: 100vh; /* Minimum height */
+    width: 70%;
+    min-height: 100vh;
   }
   img.profile-picture {
     width: 150px;
@@ -44,9 +46,8 @@
   ul li {
     margin-bottom: 10px;
   }
-  /* Custom colors for icons */
-  .institutional-email i.fa-envelope { color: #FFD700; } /* Gold */
-  .personal-email i.fa-envelope { color: #D44638; } /* Red */
+  .institutional-email i.fa-envelope { color: #FFD700; } /* Gold for institutional email */
+  .personal-email i.fa-envelope { color: #D44638; } /* Red for personal email */
   ul li i.fab.fa-linkedin { color: #0A66C2; } /* LinkedIn Blue */
   ul li i.fab.fa-github { color: #333; } /* GitHub Black */
   ul li i.fa-phone { color: green; } /* Phone Green */
@@ -57,7 +58,7 @@
   a:hover {
     text-decoration: underline;
     color: #0056b3;
-    font-style: italic; /* Italicize on hover */
+    font-style: italic; /* Make text italic on hover */
   }
 </style>
 </head>
