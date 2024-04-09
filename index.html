@@ -4,65 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vital Ahishakiye's Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
 <style>
   body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px; /* Increased base font size */
+    font-size: 18px; /* Adjust base font size */
   }
   .container {
-    width: 80%;
+    display: flex; /* Use flexbox instead of table for layout */
+    max-width: 80%;
     margin: 0 auto;
-  }
-  a {
-    text-decoration: none;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  td {
-    vertical-align: top;
-  }
-  .profile-picture {
-    width: 150px; /* Adjust as needed */
-    border-radius: 50%;
   }
   .column {
     padding: 10px;
   }
+  .fixed-column {
+    width: 30%; /* Fixed width */
+    flex-shrink: 0; /* Prevent column from shrinking */
+  }
+  .flexible-column {
+    width: 70%;
+  }
+  img.profile-picture {
+    width: 150px;
+    border-radius: 50%;
+  }
   ul {
-    list-style-type: none; /* Remove bullets */
+    list-style: none; /* Remove bullets */
     padding: 0;
   }
   ul li i {
     margin-right: 8px; /* Space between icon and text */
-    font-size: 20px; /* Increased icon size */
+  }
+  a {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
   }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <table style="width: 100%;">
-    <tr>
-      <!-- First Column -->
-      <td class="column" style="width: 30%;">
-        <h1>Vital Ahishakiye</h1>
-        <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="View My GitHub Profile" />
-        <h4> <a href="https://github.com/Vital-Ahishakiye">View my GitHub Profile</a></h4>
-        <h4> <a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vahishak%20Second%20Resume(April%20update).pdf">View my Resume</a></h4>
-        <h3>Graduate Student || CMU-Africa || MsECE)</h3>
-        
-        <ul>
-          <li><i class="fa fa-envelope"></i><a href="mailto:vahishak@andrew.cmu.edu">Institutional email</a></li>
-          <li><i class="fa fa-envelope"></i><a href="mailto:vitalahishakiye@gmail.com">Personal email</a></li>
-          <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/ahishakiye-vital">Vital Ahishakiye</a></li>
-          <li><i class="fab fa-github"></i><a href="https://github.com/Vital-Ahishakiye">Vital-Ahishakiye</a></li>
-          <li><i class="fa fa-phone"></i>+250788519271</li>
-        </ul>
-      </td>
-      <!-- Second Column -->
+  <!-- First Column -->
+  <div class="column fixed-column">
+    <h1>Vital Ahishakiye</h1>
+    <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="View My GitHub Profile" />
+    <h4><a href="https://github.com/Vital-Ahishakiye">View my GitHub Profile</a></h4>
+    <h4><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vahishak%20Second%20Resume(April%20update).pdf">View my Resume</a></h4>
+    <h3>Graduate Student || CMU-Africa || MsECE)</h3>
+    <ul>
+      <li><a href="mailto:vahishak@andrew.cmu.edu"><i class="fa fa-envelope"></i>Institutional email</a></li>
+      <li><a href="mailto:vitalahishakiye@gmail.com"><i class="fa fa-envelope"></i>Personal email</a></li>
+      <li><a href="https://www.linkedin.com/in/ahishakiye-vital"><i class="fab fa-linkedin"></i>Vital Ahishakiye</a></li>
+      <li><a href="https://github.com/Vital-Ahishakiye"><i class="fab fa-github"></i>Vital-Ahishakiye</a></li>
+      <li><i class="fa fa-phone"></i>+250788519271</li>
+    </ul>
+  </div>
+  
+  <!-- Second Column -->
+  <div class="column flexible-column">
+    <h2>About</h2>
       <td class="column" style="width: 70%;">
         <h2>About</h2>
         <p>Hello everyone! My name is Vital Ahishakiye, and I am currently pursuing a Master's of Science in Electrical and Computer Engineering with a specialization in Applied Machine Learning at Carnegie Mellon University Africa.</p>
@@ -74,10 +75,7 @@
         <img src="link-to-precipitation-chart" alt="Wausau, WI precipitation chart">
         <p>Iowa River discharge 1903-2023</p>
         <img src="link-to-discharge-chart" alt="Iowa River discharge chart">
-        <p>Hosted on GitHub Pages</p>
-      </td>
-    </tr>
-  </table>
+        <p>Hosted on GitHub Pages</p>  </div>
 </div>
 
 </body>
