@@ -10,7 +10,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     margin: 0;
-    background-image: url('your-background-image-url.jpg');
+    background-image: url('your-background-image-url.jpg'); /* Ensure this URL points to your intended background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -22,7 +22,7 @@
   }
   .column {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for readability */
   }
   .fixed-column {
     position: fixed;
@@ -31,8 +31,8 @@
     overflow-y: auto;
   }
   .flexible-column {
-    margin-left: 30%;
-    width: 70%;
+    margin-left: 32%; /* Adjusted for spacing */
+    width: 68%; /* Adjusted width to fit the remaining space */
     min-height: 100vh;
   }
   img.profile-picture {
@@ -47,28 +47,28 @@
     margin-bottom: 20px;
   }
   ul li h4 {
-    text-align: center;
+    text-align: left; /* Center aligns the headers */
   }
   ul li img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
-    width: 80%;
+    width: 80%; /* Images take up 80% of their container width */
   }
-  .institutional-email i.fa-envelope { color: #FFD700; }
-  .personal-email i.fa-envelope { color: #D44638; }
-  ul li i.fab.fa-linkedin { color: #0A66C2; }
-  ul li i.fab.fa-github { color: #333; }
-  ul li i.fa-phone { color: green; }
+  .institutional-email i.fa-envelope { color: #FFD700; } /* Gold */
+  .personal-email i.fa-envelope { color: #D44638; } /* Red */
+  ul li i.fab.fa-linkedin { color: #0A66C2; } /* LinkedIn blue */
+  ul li i.fab.fa-github { color: #333; } /* GitHub grey */
+  ul li i.fa-phone { color: green; } /* Phone icon green */
   a, a:visited {
     text-decoration: none;
-    color: #007bff;
+    color: #007bff; /* Blue links */
   }
   a:hover {
     text-decoration: underline;
     color: #0056b3;
-    font-style: italic;
+    font-style: italic; /* Italic on hover */
   }
 </style>
 </head>
@@ -78,12 +78,13 @@
   <!-- First Column -->
   <div class="column fixed-column">
     <h1>Vital Ahishakiye</h1>
-    <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="View My GitHub Profile" />
-    <h4><a href="https://github.com/Vital-Ahishakiye">View my GitHub Profile</a></h4>
-    <h4><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vahishak%20Second%20Resume(April%20update).pdf">View/Download my Resume</a></h4>
+    <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="Vital Ahishakiye">
+    <ul>
+      <li><a href="https://github.com/Vital-Ahishakiye"><i class="fab fa-github"></i> View my GitHub Profile</a></li>
+      <li><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vahishak%20Second%20Resume(April%20update).pdf"><i class="fas fa-file-alt"></i> View/Download my Resume</a></li>
+    </ul>
     <h3>Graduate Student || CMU-Africa</h3>
     <hr>
-    <!-- Contact Info -->
     <ul>
       <li class="institutional-email"><a href="mailto:vahishak@andrew.cmu.edu"><i class="fa fa-envelope"></i>  My Institutional email</a></li>
       <li class="personal-email"><a href="mailto:vitalahishakiye@gmail.com"><i class="fa fa-envelope"></i>  My Personal email</a></li>
@@ -97,18 +98,18 @@
   <div class="column flexible-column">
     <h2>About</h2>
     <p>Hello everyone! My name is Vital Ahishakiye, and I am currently pursuing a Master's of Science in Electrical and Computer Engineering with a specialization in Applied Machine Learning at Carnegie Mellon University Africa.</p>
-    <p>Data science has not only shaped my career path but has also empowered me to make informed decisions in both my professional and personal life. One notable example is how I utilized data analysis techniques to successfully overcome a betting habit, an experience I share in detail in     <a href="https://github.com/Vital-Ahishakiye/My-Unforeseen-Journey-into-Data/blob/main/full-story.md">"My Unforeseen Journey into Datascience"</a>.</p>
+    <p>Data science has not only shaped my career path but has also empowered me to make informed decisions in both my professional and personal life. One notable example is how I utilized data analysis techniques to successfully overcome a betting habit, an experience I share in detail in <a href="https://github.com/Vital-Ahishakiye/My-Unforeseen-Journey-into-Data/blob/main/full-story.md">"My Unforeseen Journey into Datascience"</a>.</p>
     <p>In addition to my academic pursuits, I am dedicated to continuously enhancing my skills through various avenues. I am presently enrolled in the Google Advanced Data Analytics course, aiming to consolidate and strengthen the diverse skills I have acquired through my courseworks. Furthermore, I have actively engaged in practical applications of my knowledge by participating in Kaggle competitions such as the Titanic shipwreck Survivors Prediction and Customer Segmentation and Classification using Machine Learningchallenges.</p>
     <hr>
     <h3>Some of the works I have done</h3>
     <ul>
       <li>
-        <h4><strong>Titanic shipwreck Survivors Prediction</strong></h4>
-        <img src="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Titanic.png?raw=true" alt="Distribution of survived in different categories">
+        <h4><strong>I. Titanic shipwreck Survivors Prediction</strong></h4>
+        <img src="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Titanic.png?raw=true" alt="Chart showing the distribution of survivors in the Different Categories">
       </li>
       <li>
-        <h4><strong>Customer Segmentation and Classification using Machine Learning</strong></h4>
-        <img src="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/credit%20cards.png?raw=true" alt="Distribution of Balance as one the features">
+        <h4><strong>II. Customer Segmentation and Classification using Machine Learning</strong></h4>
+        <img src="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/credit%20cards.png?raw=true" alt="Visualization of customers Distribution based on their Balances in $">
       </li>
     </ul>
   </div>
