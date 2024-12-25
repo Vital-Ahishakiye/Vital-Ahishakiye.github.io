@@ -1,163 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vital Ahishakiye - Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<style>
-  :root {
-    --primary-color: #0A66C2;
-    --secondary-color: #333;
-    --background-color: rgba(255, 255, 255, 0.9);
-    --text-color: #333;
-    --link-color: #007bff;
-    --hover-color: #0056b3;
-    --font-family: 'Open Sans', sans-serif;
-  }
-
-  body {
-    font-family: var(--font-family);
-    margin: 0;
-    background-image: url('https://raw.githubusercontent.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/main/im.avif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
-  header {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-
-  .sidebar {
-    flex: 1;
-    max-width: 300px;
-    padding: 20px;
-    background-color: var(--background-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .content {
-    flex: 3;
-    padding: 20px;
-  }
-
-  .profile-picture {
-    width: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px;
-  }
-
-  h1, h2 {
-    text-align: center;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  ul li {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-
-  a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: var(--hover-color);
-    text-decoration: underline;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-  }
-
-  .project {
-    margin-bottom: 30px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--background-color);
-  }
-
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    margin-top: 20px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 17px;
+      margin: 0;
+      background-image: url('https://raw.githubusercontent.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/main/im.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+    .column {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .fixed-column {
+      position: fixed;
+      width: 30%;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .flexible-column {
+      margin-left: 31%;
+      width: 69%;
+      min-height: 100vh;
+    }
+    img.profile-picture {
+      width: 150px;
+      border-radius: 50%;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 20px;
+    }
+    ul li h4 {
+      text-align: left;
+    }
+    ul li img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      width: 80%;
+    }
+    .personal-email i.fa-envelope { color: #D44638; }
+    ul li i.fab.fa-linkedin { color: #0A66C2; }
+    ul li i.fab.fa-github { color: #333; }
+    ul li i.fa-phone { color: green; }
+    a, a:visited {
+      text-decoration: none;
+      color: #007bff;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+      font-style: italic;
+    }
+    .italic-centered {
+      text-align: center;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Vital Ahishakiye</h1>
-  <p>Graduate Student | Data Scientist | CMU-Africa</p>
-</header>
-
 <div class="container">
   <!-- Sidebar -->
-  <aside class="sidebar">
+  <div class="column fixed-column">
+    <h1>Vital Ahishakiye</h1>
     <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="Vital Ahishakiye">
-    <h2>Contact</h2>
     <ul>
-      <li><a href="mailto:vitalahishakiye@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-      <li><a href="https://www.linkedin.com/in/ahishakiye-vital"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-      <li><a href="https://github.com/Vital-Ahishakiye"><i class="fab fa-github"></i> GitHub</a></li>
-      <li><i class="fas fa-phone"></i> +250788519271</li>
+      <li><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vital%20-%20Data%20Scientist%20resume%20.pdf">
+        <i class="fas fa-file-alt"></i> View/Download My Resume</a></li>
     </ul>
-    <h2>Resume</h2>
+    <h3>Graduate Student || CMU-Africa</h3>
+    <hr>
     <ul>
-      <li><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vital%20-%20Data%20Scientist%20resume%20.pdf"><i class="fas fa-file-alt"></i> View/Download</a></li>
+      <li class="personal-email"><a href="mailto:vitalahishakiye@gmail.com"><i class="fa fa-envelope"></i> My Email</a></li>
+      <li><a href="https://www.linkedin.com/in/ahishakiye-vital"><i class="fab fa-linkedin"></i> Vital Ahishakiye</a></li>
+      <li><a href="https://github.com/Vital-Ahishakiye"><i class="fab fa-github"></i> Vital-Ahishakiye</a></li>
+      <li><i class="fa fa-phone"></i> +250788519271</li>
     </ul>
-  </aside>
-
-  <!-- Content -->
-  <main class="content">
-    <h2>About Me</h2>
-    <p>I am an aspiring Data Scientist specializing in Applied Machine Learning...</p>
-
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Accessibility in Education</h3>
-      <img src="education.png" alt="Education Project">
-      <p>Detailed analysis of Rwanda's education system...</p>
-    </div>
-    <div class="project">
-      <h3>Unemployment Insights</h3>
-      <img src="unemployment.png" alt="Unemployment Project">
-      <p>Exploration of employment trends...</p>
-    </div>
-    <div class="project">
-      <h3>Transportation Modes</h3>
-      <img src="transportation.png" alt="Transportation Project">
-      <p>Efficiency of various urban transportation...</p>
-    </div>
-  </main>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="column flexible-column">
+    <h2>About</h2>
+    <p>Vital Ahishakiye is an aspiring Data Scientist pursuing a Master of Science in Electrical and Computer Engineering with a specialization in Applied Machine Learning at Carnegie Mellon University Africa. His passion for data science has transformed both his career and personal life.</p>
+    <p>Vital detailed his journey of overcoming a betting habit using data analysis in his work <a href="https://github.com/Vital-Ahishakiye/My-Unforeseen-Journey-into-Data/blob/main/full-story.md">"My Unforeseen Journey into Data Science"</a>.</p>
+    <p>He holds a Google Advanced Data Analytics certificate and volunteers with Statistics Without Borders, applying his expertise to underserved communities. He also participates in Kaggle competitions, tackling challenges like Titanic Survivors Prediction and Customer Segmentation.</p>
+    <hr>
+    <h2>Outstanding Projects</h2>
+    <ul>
+      <li>
+        <h4><strong>I. Accessibility and Quality in Rwanda's Education System</strong></h4>
+        <img src="education.png" alt="Education Chart">
+        <p>Analysis of education census data revealed 298 sectors in Rwanda lack early childhood education facilities, and 4 sectors have no primary schools. Overcrowding and limited accessibility to education remain critical challenges, emphasizing the need for targeted interventions.</p>
+      </li>
+      <li>
+        <h4><strong>II. Understanding Unemployment in Rwanda: Key Drivers & Insights</strong></h4>
+        <img src="Unemployment.png" alt="Unemployment Analysis">
+        <p>Key findings highlighted the impact of education, digital connectivity, and demographics on employment. Investment in education and bridging the digital divide are vital for addressing unemployment disparities in Rwanda.</p>
+      </li>
+      <li>
+        <h4><strong>III. Cost and Time Efficiency of Transportation Modes in Kigali</strong></h4>
+        <img src="Efficiency_frontier_with_waiting_time.png" alt="Transportation Efficiency">
+        <p>This study evaluated urban transportation modes in Kigali, focusing on cost and time efficiency. Findings informed strategies to optimize urban mobility in African cities.</p>
+      </li>
+    </ul>
+  </div>
 </div>
-
-<footer class="footer">
-  <p>&copy; 2024 Vital Ahishakiye. All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
