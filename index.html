@@ -3,126 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Collapsible Sidebar</title>
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-      font-size: 17px;
       margin: 0;
-      background-image: url('https://raw.githubusercontent.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/main/im.avif');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-    .container {
+      background-color: #f4f4f4;
       display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
     }
-    .column {
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-    .fixed-column {
-      position: fixed;
-      width: 30%;
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: white;
       height: 100vh;
       overflow-y: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: transform 0.3s ease;
     }
-    .flexible-column {
-      margin-left: 31%;
-      width: 69%;
-      min-height: 100vh;
+    .sidebar.hidden {
+      transform: translateX(-100%);
     }
-    img.profile-picture {
-      width: 150px;
-      border-radius: 50%;
+    .sidebar h2 {
+      text-align: center;
+      color: #fff;
     }
-    ul {
-      list-style-type: none;
+    .sidebar ul {
+      list-style: none;
       padding: 0;
     }
-    ul li {
-      margin-bottom: 20px;
+    .sidebar ul li {
+      margin: 20px 0;
+      text-align: center;
     }
-    ul li h4 {
-      text-align: left;
+    .sidebar ul li a {
+      color: #ddd;
+      text-decoration: none;
     }
-    ul li img {
+    .sidebar ul li a:hover {
+      color: #fff;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      left: 250px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: left 0.3s ease;
+    }
+    .toggle-btn.hidden {
+      left: 0;
+    }
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+      width: 100%;
+    }
+    .content.collapsed {
+      margin-left: 0;
+    }
+    img {
       display: block;
       margin: 0 auto;
       max-width: 100%;
       height: auto;
-      width: 80%;
     }
-    .personal-email i.fa-envelope { color: #D44638; }
-    ul li i.fab.fa-linkedin { color: #0A66C2; }
-    ul li i.fab.fa-github { color: #333; }
-    ul li i.fa-phone { color: green; }
-    a, a:visited {
-      text-decoration: none;
-      color: #007bff;
+    .project-summary {
+      margin-bottom: 20px;
     }
-    a:hover {
-      text-decoration: underline;
-      color: #0056b3;
-      font-style: italic;
+    .project-details {
+      display: none;
+      margin-top: 10px;
     }
-    .italic-centered {
-      text-align: center;
-      font-style: italic;
+    .project-details.active {
+      display: block;
     }
-    .scrollable-content {
-      max-height: 150px; /* Adjust the height as needed */
-      overflow-y: auto;
-      border: 1px solid #ddd;
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0.95);
+    button.read-more-btn {
+      display: block;
+      margin: 10px auto;
+      padding: 5px 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
       border-radius: 5px;
+      cursor: pointer;
+    }
+    button.read-more-btn:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <!-- Sidebar -->
-  <div class="column fixed-column">
-    <h1>Vital Ahishakiye</h1>
-    <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="Vital Ahishakiye">
-    <ul>
-      <li><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vital%20-%20Data%20Scientist%20resume%20.pdf">
-        <i class="fas fa-file-alt"></i> View/Download My Resume</a></li>
-    </ul>
-    <h3>Contacts</h3>
-    <hr>
-    <ul>
-      <li class="personal-email"><a href="mailto:vitalahishakiye@gmail.com"><i class="fa fa-envelope"></i> Email</a></li>
-      <li><a href="www.linkedin.com/in/vital-datascientist"><i class="fab fa-linkedin"></i> Vital Ahishakiye</a></li>
-      <li><a href="https://github.com/Vital-Ahishakiye"><i class="fab fa-github"></i> Vital-Ahishakiye</a></li>
-      <li><i class="fa fa-phone"></i> +250788519271</li>
-    </ul>
-  </div>
-  
-  <!-- Main Content -->
-  <div class="column flexible-column">
-    <h2>About</h2>
-    <p>I am a passionate Data Scientist driven by curiosity and a commitment to uncovering data-driven solutions. I specialize in applying data analytics, machine learning, and geospatial analysis to real-life projects that bring meaningful change to society. Recently, I have focused on transportation and education domains, leveraging data to create actionable insights for societal improvement.</p>
-    <p>I recently completed my coursework for a Master of Science in Electrical and Computer Engineering with a concentration in Applied Machine Learning at Carnegie Mellon University Africa. Additionally, I hold a professional certificate in Google Advanced Data Analytics.</a>.</p>
-    <p>I am eager to connect with professionals in data science and analytics to collaborate on innovative solutions that drive impactful outcomes.</p>
-    <hr>
-    <h2>Outstanding Projects</h2>
-    <ul>
-      <li>
-        <h4><strong>I. Accessibility and Quality in Rwanda's Education System</strong></h4>
-        <img src="education.png" alt="Education Chart">
-        <div class="scrollable-content">
-          <p>Analysis of education census data revealed 298 sectors in Rwanda lack early childhood education facilities, and 4 sectors have no primary schools. Overcrowding and limited accessibility to education remain critical challenges, emphasizing the need for targeted interventions.</p>
-          <p>In January 2024, UNICEF reported that a significant number of Rwandan children complete primary 
-             education without solid foundational skills. Specifically, 33% of Primary 3 class students are unable 
-             to read and understand a grade-level text in Kinyarwanda, and nearly 90% are unable to do so in 
-             English, the official language of instruction. This issue is rooted in early childhood education challenges. <em>UNICEF</em>
-  </p>
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <h2>Quick Links</h2>
+  <ul>
+    <li><a href="#project1">Education System</a></li>
+    <li><a href="#project2">Mobile Penetration</a></li>
+    <li><a href="#project3">Transportation</a></li>
+    <li><a href="#project4">AI in Education</a></li>
+  </ul>
+</div>
+
+<!-- Toggle Button -->
+<button class="toggle-btn" id="toggle-btn">Hide Sidebar</button>
+
+<!-- Main Content -->
+<div class="content" id="content">
+  <h2 id="project1">I. Accessibility and Quality in Rwanda's Education System</h2>
+  <img src="education.png" alt="Education Chart">
+  <div class="project-summary">
+    <p>Analysis of education census data revealed 298 sectors in Rwanda lack early childhood education facilities, and 4 sectors have no primary schools. Overcrowding and limited accessibility to education remain critical challenges, emphasizing the need for targeted interventions.</p>
+    <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
+    <div class="project-details">
+      <p>In January 2024, UNICEF reported that a significant number of Rwandan children complete primary 
+            education without solid foundational skills. Specifically, 33% of Primary 3 class students are unable 
+            to read and understand a grade-level text in Kinyarwanda, and nearly 90% are unable to do so in 
+            English, the official language of instruction. This issue is rooted in early childhood education challenges.
+      </p>
+      
   <p>
     Analyzing census data and information on Rwandan schools, I assessed the student-to-school ratio 
     across the country's 416 sectors. The findings revealed that 298 sectors lack any early childhood 
@@ -134,17 +140,20 @@
     of 1,500 students per school. Given that 40% of Rwanda's population is under 15 years old, 
     overcrowding and limited accessibility to primary and pre-primary education remain pressing 
     issues. Addressing these challenges is crucial for the country's future, as quality education is 
-    a key contributor to employment and overall development. <em>GOV.UK ASSETS</em>
+    a key contributor to employment and overall development.
   </p>
-        </div>
-      </li>
-      <li>
-        <h4><strong>II. Understanding Unemployment in Rwanda: Key Drivers & Insights</strong></h4>
-        <img src="Unemployment.png" alt="Unemployment Analysis">
-        <div class="scrollable-content">
-          <p>Key findings highlighted the impact of education, digital connectivity, and demographics on employment. Investment in education and bridging the digital divide are vital for addressing unemployment disparities in Rwanda.</p>
-          <p>
-    As of the third quarter of 2024, Rwanda's employment participation rate stood at 64.1%, with a 
+
+    </div>
+  </div>
+
+  <h2 id="project2">II. Understanding Unemployment in Rwanda: Key Drivers & Insights</h2>
+  <img src="mobile.png" alt="Mobile Penetration Chart">
+  <div class="project-summary">
+    <p>Key findings highlighted the impact of education, digital connectivity, and demographics on employment. Investment in education and bridging the digital divide are vital for addressing unemployment disparities in Rwanda.</p>
+    <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
+    <div class="project-details">
+<p>
+           As of the third quarter of 2024, Rwanda's employment participation rate stood at 64.1%, with a 
     median age of 19 years and 78% of the population under 35  <em>NISR</em>. Employment remains a pressing 
     challenge, shaped by education, digital connectivity, and demographic factors. Insights from the 
     2022 Census highlight education as a key determinant of employment, with over 60% of individuals 
@@ -166,14 +175,16 @@
     Gender inequalities persist, with women experiencing higher unemployment rates. Addressing these disparities through 
     inclusive policies and equitable resource allocation is vital for fostering Rwanda’s economic growth and resilience.
   </p>
-        </div>
-      </li>
-      <li>
-        <h4><strong>III. Cost and Time Efficiency of Transportation Modes in Kigali</strong></h4>
-        <img src="Efficiency_frontier_with_waiting_time.png" alt="Transportation Efficiency">
-        <div class="scrollable-content">
-          <p>This study evaluated urban transportation modes in Kigali, focusing on cost and time efficiency. Findings informed strategies to optimize urban mobility in African cities.</p>
-          <p>
+    </div>
+  </div>
+
+  <h2 id="project3">III. Cost and Time Efficiency of Transportation Modes in Kigali</h2>
+  <img src="moto-taxi.png" alt="Moto-Taxi Transportation Analysis">
+  <div class="project-summary">
+    <p>This study evaluated urban transportation modes in Kigali, focusing on cost and time efficiency. Findings informed strategies to optimize urban mobility in African cities.</p>
+    <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
+    <div class="project-details">
+ <p>
     This part of ongoing research (Towards Digital Twins for Urban Mobility in Emerging Economies) explores the 
     cost-effectiveness and time efficiency of various transportation modes in urban African contexts, with a 
     spotlight on moto taxis' prominence in Kigali. In cities where informal transport systems dominate, moto 
@@ -192,20 +203,24 @@
     This approach will enhance rider and driver welfare, improve service quality, and contribute to a secure and efficient transport network 
     in Kigali and similar African cities.
   </p>
-        </div>
-      </li>
-      <li>
-        <h4><strong>IV. Automating Palm Tree Counting with Computer Vision for Efficiency</strong></h4>
-        <img src="Palm tree.jpeg" alt="Palm Tree Counting">
-        <div class="scrollable-content">
-          <p>This project aimed to automate palm tree counting in large areas to replace inefficient manual methods. By leveraging high-resolution drone images and advanced computer vision techniques, the project successfully automated the counting process, reducing the time from 12 minutes to under one second per image on average.</p>
-          <p>
+    </div>
+  </div>
+
+  <h2 id="project4">IV. Automating Palm Tree Counting with Computer Vision for Efficiency</h2>
+  <img src="ai-education.png" alt="AI in Education">
+  <div class="project-summary">
+    <p>This project aimed to automate palm tree counting in large areas to replace inefficient manual methods. By leveraging high-resolution drone images and advanced computer vision techniques, the project successfully automated the counting process, reducing the time from 12 minutes to under one second per image on average.</p>
+    <button class="read-more-btn" onclick="toggleDetails(this)">Read More</button>
+    <div class="project-details">
+ <p>
     This project focused on improving how palm trees are counted in large areas of land. The client, who does seasonal work counting palm trees,
     previously relied on people manually counting trees from drone images, which was prone to human error and inefficiency. 
     Using drones to capture high-resolution aerial images of the land, our solution utilized advanced computer vision techniques 
     to automate the counting process.
   </p>
-  <   This represented a significant improvement compared to the manual process, which took approximately 12 minutes per image.
+  <p>
+    With the help of Roboflow, we trained a robust object detection model capable of inferring tree counts from images in under one second. 
+    This represented a significant improvement compared to the manual process, which took approximately 12 minutes per image.
     This approach not only enhanced accuracy but also dramatically reduced the time and effort required for tree enumeration.
   </p>
   <p>
@@ -213,11 +228,33 @@
     improve precision, and offer scalable solutions for agricultural and land management industries. This innovation has empowered the client to 
     make data-driven decisions more efficiently and focus resources on higher-value tasks.
   </p>
-        </div>
-      </li>
-    </ul>
+    </div>
   </div>
 </div>
+
+<script>
+  const sidebar = document.getElementById('sidebar');
+  const toggleBtn = document.getElementById('toggle-btn');
+  const content = document.getElementById('content');
+
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('hidden');
+    content.classList.toggle('collapsed');
+    toggleBtn.classList.toggle('hidden');
+
+    if (sidebar.classList.contains('hidden')) {
+      toggleBtn.textContent = 'Show Sidebar';
+    } else {
+      toggleBtn.textContent = 'Hide Sidebar';
+    }
+  });
+
+  function toggleDetails(button) {
+    const details = button.nextElementSibling;
+    details.classList.toggle('active');
+    button.textContent = details.classList.contains('active') ? 'Show Less' : 'Read More';
+  }
+</script>
 
 </body>
 </html>
