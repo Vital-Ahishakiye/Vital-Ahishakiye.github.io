@@ -167,6 +167,7 @@
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
       height: 300px;
+      background-color: #f0f0f0;
     }
 
     .project-card:hover {
@@ -178,6 +179,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
     }
 
     .project-overlay {
@@ -231,7 +233,7 @@
 
     .cert-card {
       background: white;
-      padding: 2rem;
+      padding: 1rem;
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -242,6 +244,7 @@
       display: block;
       position: relative;
       overflow: hidden;
+      height: 300px;
     }
 
     .cert-card:hover {
@@ -251,26 +254,26 @@
 
     .cert-image {
       width: 100%;
-      height: 200px;
+      height: 100%;
       object-fit: contain;
-      margin-bottom: 1rem;
+      object-position: center;
     }
 
-    .cert-card h3 {
-      font-size: 1.2rem;
-      color: #1a1a1a;
-      opacity: 0;
-      transition: opacity 0.3s;
+    .cert-title-overlay {
       position: absolute;
-      bottom: 20px;
+      bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(45, 80, 22, 0.9);
+      background: rgba(45, 80, 22, 0.95);
       color: white;
       padding: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
-    .cert-card:hover h3 {
+    .cert-card:hover .cert-title-overlay {
       opacity: 1;
     }
 
@@ -430,7 +433,6 @@
             </div>
           </a>
           
-        <div class="projects-grid">
           <a href="https://drive.google.com/drive/folders/1Z0IN8ZZ8TRSMjx4KsZsrzye8KZuFtFOF?usp=drive_link" target="_blank" style="text-decoration: none; color: inherit;">
             <div class="project-card">
               <img src="Sentiment_Analysis_Results.png" alt="Sentiment Analysis" class="project-image">
@@ -509,28 +511,28 @@
       <h2>Certifications</h2>
       <div class="cert-grid">
         <a href="Specialisation Record - Certificate.pdf" target="_blank" class="cert-card">
-          <i class="fas fa-chart-line cert-icon"></i>
-          <h3>Google Advanced Data Analytics</h3>
+          <img src="google-cert-placeholder.jpg" alt="Google Advanced Data Analytics Certificate" class="cert-image">
+          <div class="cert-title-overlay">Google Advanced Data Analytics</div>
         </a>
 
         <a href="Vjal Institute Certificate.pdf" target="_blank" class="cert-card">
-          <i class="fas fa-robot cert-icon"></i>
-          <h3>AI Empowerment for Teams</h3>
+          <img src="ai-empowerment-placeholder.jpg" alt="AI Empowerment for Teams Certificate" class="cert-image">
+          <div class="cert-title-overlay">AI Empowerment for Teams</div>
         </a>
 
         <a href="leadership.pdf" target="_blank" class="cert-card">
-          <i class="fas fa-users cert-icon"></i>
-          <h3>Leadership</h3>
+          <img src="leadership-placeholder.jpg" alt="Leadership Certificate" class="cert-image">
+          <div class="cert-title-overlay">Leadership</div>
         </a>
 
-        <a href="Course%205%20-%20Data%20Analysis%20and%20Visualization%20with%20Power%20BI.pdf" class="cert-card">
-          <i class="fas fa-chart-bar cert-icon"></i>
-          <h3>Microsoft Power BI Analyst</h3>
+        <a href="Course%205%20-%20Data%20Analysis%20and%20Visualization%20with%20Power%20BI.pdf" target="_blank" class="cert-card">
+          <img src="powerbi-cert-placeholder.jpg" alt="Microsoft Power BI Analyst Certificate" class="cert-image">
+          <div class="cert-title-overlay">Microsoft Power BI Analyst</div>
         </a>
 
-        <a href="Data Storage and Queries.pdf" class="cert-card">
-          <i class="fab fa-aws cert-icon"></i>
-          <h3>AWS Data Engineering</h3>
+        <a href="Data Storage and Queries.pdf" target="_blank" class="cert-card">
+          <img src="aws-cert-placeholder.jpg" alt="AWS Data Engineering Certificate" class="cert-image">
+          <div class="cert-title-overlay">AWS Data Engineering</div>
         </a>
       </div>
     </div>
