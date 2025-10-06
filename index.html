@@ -3,258 +3,514 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Vital Ahishakiye - Data Scientist & Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 17px;
+    * {
       margin: 0;
-      background-image: url('https://raw.githubusercontent.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/main/im.avif');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .container {
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
       display: flex;
-      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2d5016;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 5rem 10%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1200px;
       width: 100%;
     }
-    .column {
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0.8);
+
+    /* Hero Section */
+    #home {
+      margin-top: 60px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     }
-    .fixed-column {
-      position: fixed;
-      width: 30%;
-      height: 100vh;
-      overflow-y: auto;
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: center;
     }
-    .flexible-column {
-      margin-left: 31%;
-      width: 69%;
-      min-height: 100vh;
-    }
-    img.profile-picture {
-      width: 150px;
+
+    .profile-photo {
+      width: 100%;
+      max-width: 300px;
       border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border: 5px solid #2d5016;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+
+    .about-text h1 {
+      font-size: 2.5rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
     }
-    ul li {
-      margin-bottom: 20px;
+
+    .about-text h2 {
+      font-size: 1.3rem;
+      color: #2d5016;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
     }
-    ul li h4 {
-      text-align: left;
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: #555;
+      font-size: 1.05rem;
     }
-    ul li img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-      width: 80%;
+
+    .tech-stack {
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid #2d5016;
+      margin: 1.5rem 0;
     }
-    .personal-email i.fa-envelope { color: #D44638; }
-    ul li i.fab.fa-linkedin { color: #0A66C2; }
-    ul li i.fab.fa-github { color: #333; }
-    ul li i.fa-phone { color: green; }
-    a, a:visited {
-      text-decoration: none;
-      color: #007bff;
+
+    .availability {
+      background-color: #2d5016;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
     }
-    a:hover {
-      text-decoration: underline;
-      color: #0056b3;
-      font-style: italic;
+
+    /* Portfolio Section */
+    #portfolio {
+      background-color: #fff;
+      min-height: auto;
     }
-    .italic-centered {
+
+    #portfolio h2 {
+      font-size: 2.5rem;
       text-align: center;
-      font-style: italic;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
     }
-    .more-content {
-      display: none;
+
+    .portfolio-subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
     }
-    .read-more-button {
+
+    .project-category {
+      margin-bottom: 4rem;
+    }
+
+    .category-title {
+      font-size: 1.8rem;
+      color: #2d5016;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #2d5016;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       cursor: pointer;
-      color: #007bff;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 300px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(45, 80, 22, 0.95);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .project-overlay h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-overlay p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Certifications Section */
+    #certifications {
+      background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+      min-height: auto;
+    }
+
+    #certifications h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #1a1a1a;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .cert-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .cert-icon {
+      font-size: 4rem;
+      color: #2d5016;
+      margin-bottom: 1rem;
+    }
+
+    .cert-card h3 {
+      font-size: 1.2rem;
+      color: #1a1a1a;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .cert-card:hover h3 {
+      opacity: 1;
+    }
+
+    /* Contact Section */
+    #contact {
+      background-color: #1a1a1a;
+      color: white;
+      min-height: 50vh;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .contact-icon {
+      color: white;
+      font-size: 3rem;
+      transition: color 0.3s, transform 0.3s;
+      text-decoration: none;
+    }
+
+    .contact-icon:hover {
+      color: #2d5016;
+      transform: scale(1.2);
+    }
+
+    .get-in-touch-btn {
+      background-color: #2d5016;
+      color: white;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.3s, transform 0.3s;
+      margin: 2rem 0;
+    }
+
+    .get-in-touch-btn:hover {
+      background-color: #3d6b20;
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .profile-photo {
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 3rem 5%;
+      }
+
+      nav ul {
+        gap: 1.5rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <!-- Sidebar -->
-  <div class="column fixed-column">
-    <h1>Vital Ahishakiye</h1>
-    <img class="profile-picture" src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="Vital Ahishakiye">
+  <!-- Navigation -->
+  <nav>
     <ul>
-      <li><a href="https://github.com/Vital-Ahishakiye/Vital-Ahishakiye.github.io/blob/main/Vital%20-%20Data%20Scientist%20resume%20.pdf">
-        <i class="fas fa-file-alt"></i> View/Download My Resume</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
-    <h3>Contacts</h3>
-    <hr>
-    <ul>
-      <li class="personal-email"><a href="mailto:vitalahishakiye@gmail.com"><i class="fa fa-envelope"></i> Email</a></li>
-      <li><a href="www.linkedin.com/in/vital-datascientist"><i class="fab fa-linkedin"></i> Vital Ahishakiye</a></li>
-      <li><a href="https://github.com/Vital-Ahishakiye"><i class="fab fa-github"></i> Vital-Ahishakiye</a></li>
-      <li><i class="fa fa-phone"></i> +250788519271</li>
-    </ul>
-    <!-- Certifications Section -->
-    <h3>Certifications</h3>
-    <hr>
-    <ul>
-      <li><a href="Specialisation Record - Certificate.pdf" target="_blank">Google Advanced Data Analytics</a></li>
-      <li><a href="Vjal Institute Certificate.pdf" target="_blank">AI Empowerment for Teams</a></li>
-      <li><a href="leadership.pdf" target="_blank">Leadership</a></li>
-    </ul>
-  </div>
-  
-  <!-- Main Content -->
-  <div class="column flexible-column">
-    <h2>About</h2>
-    <p>I am a passionate Data Scientist driven by curiosity and a commitment to uncovering data-driven solutions. I specialize in applying data analytics, machine learning, and geospatial analysis to real-life projects that bring meaningful change to society. Recently, I have focused on transportation and education domains, leveraging data to create actionable insights for societal improvement.</p>
-    <p>I recently completed my coursework for a Master of Science in Electrical and Computer Engineering with a concentration in Applied Machine Learning at Carnegie Mellon University. Additionally, I hold a professional certificate in Google Advanced Data Analytics.</p>
-    <p>I am eager to connect with professionals in data science and analytics to collaborate on innovative solutions that drive impactful outcomes.</p>
-    <hr>
-    <h2>Outstanding Projects</h2>
-    <ul>
-      <li>
-        <h3><strong><a href="https://www.arcgis.com/apps/dashboards/24670ee66036406e9294a9b1d4e03eb5" target="_blank">I. Accessibility and Quality in Rwanda's Education System</a></strong></h3>
+  </nav>
 
-        <img src="ECD-Dashboard.png" alt="Education Chart">
-        <p>71% of 416 Sectors in Rwanda Have No Pre-Primary Schools</p>
-        <div class="more-content">
- <p>In January 2024, UNICEF reported that a significant number of Rwandan children complete primary 
-            education without solid foundational skills. Specifically, 33% of Primary 3 class students are unable 
-            to read and understand a grade-level text in Kinyarwanda, and nearly 90% are unable to do so in 
-            English, the official language of instruction. This issue is rooted in early childhood education challenges.
-      </p>
-      
-  <p>
-    Analyzing census data and information on Rwandan schools, I assessed the student-to-school ratio 
-    across the country's 416 sectors. The findings revealed that 298 sectors lack any early childhood 
-    education facilities, and 4 sectors have no primary schools, indicating that approximately 71% of 
-    sectors are without early childhood education infrastructure.
-  </p>
+  <!-- Home/About Section -->
+  <section id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <img src="https://avatars.githubusercontent.com/u/141754322?v=4" alt="Vital Ahishakiye" class="profile-photo">
         </div>
-        <span class="read-more-button" onclick="toggleContent(this)">Read More...</span>
-      </li>
-      <li>
-        <h3><strong><a href="https://github.com/CMU-IDS-Fall-2024/final-project-f24-the-outliers/blob/main/Report.md" target="_blank">II. Understanding Unemployment in Rwanda: Key Drivers & Insights</a></strong></h3>
-        <img src="Unemployment.png" alt="Unemployment Analysis">
-        <p>Key findings highlighted the impact of education, digital connectivity, and demographics on employment. Investment in education and bridging the digital divide are vital for addressing unemployment disparities in Rwanda.</p>
-        <div class="more-content">
-<p>
-           As of the third quarter of 2024, Rwanda's employment participation rate stood at 64.1%, with a 
-    median age of 19 years and 78% of the population under 35  <em>NISR</em>. Employment remains a pressing 
-    challenge, shaped by education, digital connectivity, and demographic factors. Insights from the 
-    2022 Census highlight education as a key determinant of employment, with over 60% of individuals 
-    holding tertiary qualifications being employed. However, disparities in access to quality education 
-    hinder opportunities for many, making investment in education and skills training essential to bridging 
-    the employment gap.
-  </p>
-  <p>
-    Digital connectivity significantly influences employability. Individuals with smartphones or feature phones
-    equipped with radios report employment rates above 50%, while those without such access face higher unemployment. 
-    Furthermore, reliable internet access enhances job opportunities by providing pathways to resources, training, 
-    and professional networks. Bridging the digital divide through expanded connectivity and literacy programs is critical 
-    for increasing employment, particularly in underserved regions.
-  </p>
-  <p>
-    Geographical and demographic disparities also play a significant role. Urban centers like Kigali offer better employment
-    prospects than rural areas such as the Western Province, underscoring the need for targeted rural development. Employment
-    peaks among individuals aged 25-44, while younger and older populations face barriers tied to education and health challenges. 
-    Gender inequalities persist, with women experiencing higher unemployment rates. Addressing these disparities through 
-    inclusive policies and equitable resource allocation is vital for fostering Rwanda’s economic growth and resilience.
-  </p>
+        <div class="about-text">
+          <h1>Vital Ahishakiye</h1>
+          <h2>Data Scientist & Engineer</h2>
+          <p>Passionate Data Scientist/Engineer with 3+ years of experience in analytics, machine learning, and geospatial data analysis. Recently, I've been focused on the mobility sector, applying data-driven solutions to optimize transport systems and enhance urban infrastructure.</p>
+          
+          <div class="tech-stack">
+            <strong>Data Engineering/Science Stack:</strong><br>
+            ★ Python DS & ML Stack | ★ Analytics, A/B testing | ★ SQL, MySQL, Postgres | ★ Power BI, Tableau, Streamlit | ★ Airflow, dbt | ★ Docker, Terraform | ★ Hadoop, PySpark | ★ AWS
+          </div>
+          
+          <div class="availability">
+            ✓ Available for short-term projects and part-time longer-term engagements
+          </div>
         </div>
-        <span class="read-more-button" onclick="toggleContent(this)">Read More...</span>
-      </li>
-      <li>
-        <h3><strong>III. "Efficient Frontier" of Transportation Modes in Kigali</strong></h3>
-        <img src="efficient-frontier_all+in_one.png" alt="Transportation Efficiency">
-        <p>This study evaluated urban transportation modes in Kigali, focusing on cost and time efficiency. Findings informed strategies to optimize urban mobility in African cities.</p>
-        <div class="more-content">
-<p>
-    This part of ongoing research (Towards Digital Twins for Urban Mobility in Emerging Economies) explores the 
-    cost-effectiveness and time efficiency of various transportation modes in urban African contexts, with a 
-    spotlight on moto taxis' prominence in Kigali. In cities where informal transport systems dominate, moto 
-    taxis emerge as one of the most time-efficient and cost-effective options, particularly when evaluating 
-    overall cost per kilometer and average waiting times. The findings highlight moto taxis' practicality in 
-    addressing urban mobility challenges, offering a swift and affordable solution for residents.
-  </p>
-  <p>
-    The study also emphasizes the need for strategic investments in regulatory frameworks and digital innovations. 
-    Based on survey feedback from over 200 respondents across Kigali, key areas for improvement include the development
-    of hailing apps, better hygiene practices, and enhanced safety measures. Implementing such advancements would not only 
-    address the concerns of commuters but also transform moto taxis into a safer, more reliable, and professionally managed transport mode.
-  </p>
-  <p>
-    By integrating proper regulations and leveraging technology, moto taxis can evolve into a cornerstone of sustainable urban transport. 
-    This approach will enhance rider and driver welfare, improve service quality, and contribute to a secure and efficient transport network 
-    in Kigali and similar African cities.
-  </p>
-        </div>
-        <span class="read-more-button" onclick="toggleContent(this)">Read More...</span>
-      </li>
-      <li>
-        <h3><strong>IV. Automating Palm Tree Counting with Computer Vision for Efficiency</strong></h3>
-        <img src="Palm tree.jpeg" alt="Palm Tree Counting">
-        <p>This project aimed to automate palm tree counting in large areas to replace inefficient manual methods. By leveraging high-resolution drone images and advanced computer vision techniques, the project successfully automated the counting process, reducing the time from 12 minutes to under one second per image on average. </p>
-        <div class="more-content">
-<p>
-    This project focused on improving how palm trees are counted in large areas of land. The client, who does seasonal work counting palm trees,
-    previously relied on people manually counting trees from drone images, which was prone to human error and time consuming, 
-    Using high-resolution aerial images of the land, this computer vision solution utilized advanced computer vision techniques 
-    to automate the counting process.
-  </p>
-  <p>
-    With the help of Roboflow, this model was trained to infer tree counts from images in under one second. 
-    This represented a significant improvement compared to the manual process, which took approximately 12 minutes per image.
-    This approach not only enhanced accuracy but also significantly reduced the time and effort required for palm tree counting.
-  </p>
-  <p>
-    By replacing labor-intensive manual counting with an automated solution, this project demonstrates how technology can streamline workflows, 
-    improve precision, and offer scalable solutions for agricultural and land management industries. 
-  </p>
-        </div>
-        <span class="read-more-button" onclick="toggleContent(this)">Read More...</span>
-      </li>
-        <li>
-        <h3><strong>V. Walking to Work: Insights into Healthy Commuting Trends in Pittsburgh</strong></h3>
-        <img src="Walk to work pisstburg.png" alt="Walk to work Efficiency">
-        <p>Mapping Pittsburgh’s Walk-to-Work Patterns: A Glimpse into the City’s Unique Commuter Behavior.</p>
-        <div class="more-content">
-<p>
-    This visualization highlights the uneven distribution of walking commuters across Pittsburgh, 
-  with clusters near areas like the Central Business District, Oakland, and East Liberty. 
-  These trends are influenced by compact urban centers, proximity to major employers, and pedestrian-friendly infrastructure.
-  The findings provide actionable insights for city planners working to enhance walking and biking options under the Complete Streets policy, 
-  enabling a healthier, more sustainable commute for residents.
-<a href="https://storymaps.arcgis.com/stories/c0984b36bc0d4590bca0fd16979b4d21">Click here to explore how these patterns compare between where workers live and the percentage of those who walk to work</a>  
-</p>
-        </div>
-        <span class="read-more-button" onclick="toggleContent(this)">Read More...</span>
-      </li>
-    </ul>
-    <h2><strong><a href="https://tinyurl.com/ys7twzyt" target="_blank">GIS Projects</a></strong></h2>
-  </div>
-</div>
+      </div>
+    </div>
+  </section>
 
-<script>
-  function toggleContent(button) {
-    const content = button.previousElementSibling;
-    const isContentVisible = content.style.display === 'block';
-    
-    // Toggle content visibility
-    content.style.display = isContentVisible ? 'none' : 'block';
-    
-    // Change the button text
-    button.textContent = isContentVisible ? 'Read More...' : 'Show Less';
-  }
-</script>
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p class="portfolio-subtitle">A sample of my work</p>
+
+      <!-- Data Science Projects -->
+      <div class="project-category">
+        <h3 class="category-title">Data Science</h3>
+        <div class="projects-grid">
+          <a href="https://github.com/CMU-IDS-Fall-2024/final-project-f24-the-outliers/blob/main/Report.md" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+              <img src="Unemployment.png" alt="Unemployment Analysis" class="project-image">
+              <div class="project-overlay">
+                <h3>Understanding Unemployment in Rwanda</h3>
+                <p>Analyzed 2022 Census data revealing that 60%+ of tertiary-educated individuals are employed, while digital connectivity significantly impacts employability. Identified key urban-rural disparities informing targeted policy recommendations.</p>
+              </div>
+            </div>
+          </a>
+
+          <div class="project-card">
+            <img src="Palm tree.jpeg" alt="Palm Tree Counting" class="project-image">
+            <div class="project-overlay">
+              <h3>Automating Palm Tree Counting</h3>
+              <p>Developed a computer vision solution reducing palm tree counting time from 12 minutes to under 1 second per image using Roboflow and high-resolution aerial imagery, demonstrating ML's power in agricultural workflows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Geospatial Analysis Projects -->
+      <div class="project-category">
+        <h3 class="category-title">Geospatial Analysis</h3>
+        <div class="projects-grid">
+          <a href="https://www.arcgis.com/apps/dashboards/24670ee66036406e9294a9b1d4e03eb5" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+              <img src="ECD-Dashboard.png" alt="Education System" class="project-image">
+              <div class="project-overlay">
+                <h3>Rwanda's Education Accessibility</h3>
+                <p>Mapped student-to-school ratios across 416 sectors, revealing that 71% lack pre-primary schools. Analysis highlights critical infrastructure gaps contributing to foundational learning challenges affecting 33% of Primary 3 students.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://storymaps.arcgis.com/stories/c0984b36bc0d4590bca0fd16979b4d21" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+              <img src="Walk to work pisstburg.png" alt="Pittsburgh Walking Analysis" class="project-image">
+              <div class="project-overlay">
+                <h3>Pittsburgh's Walking Commute Patterns</h3>
+                <p>Visualized walk-to-work distribution across Pittsburgh neighborhoods, identifying high-concentration areas near CBD, Oakland, and East Liberty. Provides actionable insights for Complete Streets policy implementation.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://tinyurl.com/ys7twzyt" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+              <img src="https://via.placeholder.com/400x300/2d5016/ffffff?text=More+GIS+Projects" alt="Additional GIS Projects" class="project-image">
+              <div class="project-overlay">
+                <h3>Additional GIS Projects</h3>
+                <p>Explore more geospatial analysis projects including interactive maps, spatial data visualizations, and location-based insights for various sectors.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Data Engineering Projects -->
+      <div class="project-category">
+        <h3 class="category-title">Data Engineering</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Coming+Soon" alt="Data Engineering Project" class="project-image">
+            <div class="project-overlay">
+              <h3>Data Engineering Projects</h3>
+              <p>Exciting data engineering projects showcasing ETL pipelines, data orchestration, and cloud infrastructure solutions coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <div class="container">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <a href="Specialisation Record - Certificate.pdf" target="_blank" class="cert-card">
+          <i class="fas fa-chart-line cert-icon"></i>
+          <h3>Google Advanced Data Analytics</h3>
+        </a>
+
+        <a href="Vjal Institute Certificate.pdf" target="_blank" class="cert-card">
+          <i class="fas fa-robot cert-icon"></i>
+          <h3>AI Empowerment for Teams</h3>
+        </a>
+
+        <a href="leadership.pdf" target="_blank" class="cert-card">
+          <i class="fas fa-users cert-icon"></i>
+          <h3>Leadership</h3>
+        </a>
+
+        <a href="#" class="cert-card">
+          <i class="fas fa-chart-bar cert-icon"></i>
+          <h3>Microsoft Power BI Analyst</h3>
+        </a>
+
+        <a href="#" class="cert-card">
+          <i class="fab fa-aws cert-icon"></i>
+          <h3>AWS Data Engineering</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <a href="#contact" class="get-in-touch-btn">Let's Connect</a>
+      <div class="contact-icons">
+        <a href="mailto:vitalahishakiye@gmail.com" class="contact-icon" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/vital-datascientist" target="_blank" class="contact-icon" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Vital-Ahishakiye" target="_blank" class="contact-icon" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="tel:+250788519271" class="contact-icon" title="Phone">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
