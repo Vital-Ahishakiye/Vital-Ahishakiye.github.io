@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Vital Ahishakiye</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2d5016;
+    }
+
+    /* Blog Container */
+    .blog-container {
+      max-width: 1200px;
+      margin: 100px auto 50px;
+      padding: 0 5%;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Blog Card */
+    .blog-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 2rem;
+    }
+
+    .blog-date {
+      color: #2d5016;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-title {
+      font-size: 1.5rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .blog-excerpt {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .read-more {
+      color: #2d5016;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .read-more i {
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover .read-more i {
+      transform: translateX(5px);
+    }
+
+    /* Coming Soon Card */
+    .coming-soon {
+      background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      opacity: 0.7;
+    }
+
+    .coming-soon-content {
+      text-align: center;
+    }
+
+    .coming-soon-content i {
+      font-size: 3rem;
+      color: #2d5016;
+      margin-bottom: 1rem;
+    }
+
+    .coming-soon-content h3 {
+      font-size: 1.5rem;
+      color: #666;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Blog Container -->
+  <div class="blog-container">
+    <div class="page-header">
+      <h1>Blog</h1>
+      <p>Insights on data science, mobility, and technology in Africa</p>
+    </div>
+
+    <div class="blog-grid">
+      <!-- Blog Post 1 -->
+      <a href="https://www.linkedin.com/pulse/rwandas-electric-vehicle-revolution-what-you-didnt-see-ahishakiye-fltyf" target="_blank" class="blog-card">
+        <img src="https://via.placeholder.com/400x250/2d5016/ffffff?text=EV+Revolution" alt="Rwanda's Electric Vehicle Revolution" class="blog-image">
+        <div class="blog-content">
+          <div class="blog-date">Published on LinkedIn</div>
+          <h2 class="blog-title">Rwanda's Electric Vehicle Revolution: What You Didn't See Coming</h2>
+          <p class="blog-excerpt">An in-depth analysis of Rwanda's electric vehicle adoption, policy initiatives, and the future of sustainable transportation in East Africa.</p>
+          <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <!-- Placeholder Blog Post 2 -->
+      <div class="blog-card coming-soon">
+        <div class="coming-soon-content">
+          <i class="fas fa-pen-fancy"></i>
+          <h3>More articles coming soon...</h3>
+        </div>
+      </div>
+
+      <!-- Placeholder Blog Post 3 -->
+      <div class="blog-card coming-soon">
+        <div class="coming-soon-content">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Stay tuned for more insights</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
