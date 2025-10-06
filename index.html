@@ -240,6 +240,8 @@
       text-decoration: none;
       color: inherit;
       display: block;
+      position: relative;
+      overflow: hidden;
     }
 
     .cert-card:hover {
@@ -247,9 +249,10 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .cert-icon {
-      font-size: 4rem;
-      color: #2d5016;
+    .cert-image {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
       margin-bottom: 1rem;
     }
 
@@ -258,6 +261,13 @@
       color: #1a1a1a;
       opacity: 0;
       transition: opacity 0.3s;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      background: rgba(45, 80, 22, 0.9);
+      color: white;
+      padding: 1rem;
     }
 
     .cert-card:hover h3 {
@@ -285,6 +295,11 @@
       margin-top: 2rem;
     }
 
+    .contact-icon-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
     .contact-icon {
       color: white;
       font-size: 3rem;
@@ -295,6 +310,26 @@
     .contact-icon:hover {
       color: #2d5016;
       transform: scale(1.2);
+    }
+
+    .contact-info {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2d5016;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .contact-icon-wrapper:hover .contact-info {
+      opacity: 1;
     }
 
     .get-in-touch-btn {
@@ -431,7 +466,7 @@
 
           <a href="https://tinyurl.com/ys7twzyt" target="_blank" style="text-decoration: none; color: inherit;">
             <div class="project-card">
-              <img src="https://via.placeholder.com/400x300/2d5016/ffffff?text=More+GIS+Projects" alt="Additional GIS Projects" class="project-image">
+              <img src="https://via.placeholder.com/400x300/1a1a1a/ffffff?text=More+GIS+Projects" alt="Additional GIS Projects" class="project-image">
               <div class="project-overlay">
                 <h3>Additional GIS Projects</h3>
                 <p>Explore more geospatial analysis projects including interactive maps, spatial data visualizations, and location-based insights for various sectors.</p>
@@ -496,18 +531,24 @@
       <h2>Get In Touch</h2>
       <a href="#contact" class="get-in-touch-btn">Let's Connect</a>
       <div class="contact-icons">
-        <a href="mailto:vitalahishakiye@gmail.com" class="contact-icon" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <div class="contact-icon-wrapper">
+          <a href="mailto:vitalahishakiye@gmail.com" class="contact-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <span class="contact-info">vitalahishakiye@gmail.com</span>
+        </div>
         <a href="https://www.linkedin.com/in/vital-datascientist" target="_blank" class="contact-icon" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://github.com/Vital-Ahishakiye" target="_blank" class="contact-icon" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="tel:+250788519271" class="contact-icon" title="Phone">
-          <i class="fas fa-phone"></i>
-        </a>
+        <div class="contact-icon-wrapper">
+          <a href="tel:+250788519271" class="contact-icon" title="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+          <span class="contact-info">+250 788 519 271</span>
+        </div>
       </div>
     </div>
   </section>
